@@ -28,13 +28,13 @@ const About = () => {
         
         <section className="selectedProducts flex flex-col">
   {articles.map(article => (
-    <div className="relative w-5/6 min-h-auto md:h-auto md:w-3/5 pb-10 px-10 mx-auto mt-10 mb-20 bg-primaryWhite shadow-xl" key={article.id}>
+    <div className="relative w-5/6 min-h-auto md:h-auto md:w-3/5 pb-10 px-2 md:px-10 mx-auto mt-10 mb-20 bg-primaryWhite shadow-xl" key={article.id}>
       <h1 className="text-3xl md:text-4xl lg:text-6xl font-thin font-Tilt-Warp text-center py-10">{article.title}</h1>
       <div className="relative">
         <img className='w-full object-cover rounded-md' src={article.imageName} alt={article.altText} />
         <p
           onMouseEnter={() => setShowArticle(article.id)}
-          className="font-bold bg-primaryWhite absolute bottom-0 w-full h-16 flex justify-center items-center text-center opacity-80 cursor-pointer">Läs artikel!</p>
+          className="font-Playfair font-bold text-lg md:text-xl bg-primaryWhite absolute bottom-0 w-full h-12 lg:h-16 flex justify-center items-center text-center opacity-80 cursor-pointer">Läs artikel!</p>
       </div>
       {showArticle === article.id && (
         <div onMouseLeave={() => setShowArticle(null)}

@@ -53,8 +53,10 @@ const Cart = () => {
     useEffect(() => {
       if (totalPrice < 400) {
         setshippingCost("59");
+        setTotalPrice(totalPrice.toString());
       } else {
         setshippingCost("0");
+        setTotalPrice(totalPrice.toString());
       }
     }, [totalPrice]);
 
@@ -76,16 +78,15 @@ const Cart = () => {
       if(zipcode.length < 1) {setErrorInputMessage(true); return}
       if(city.length < 1) {setErrorInputMessage(true); return}
 
-      if(totalPrice < 400) {
-        setshippingCost(59);
-      } else {
-        setshippingCost(0);
-      }
+      // if(totalPrice < 400) {
+      //   setshippingCost(59);
+      // } else {
+      //   setshippingCost(0);
+      // }
 
-      setTimeout(() => {
-        //Change total price to string
-        setTotalPrice(totalPrice.toString());
-      }, 500);
+      
+      
+      
 
       
 
@@ -163,6 +164,7 @@ const Cart = () => {
           setsuccessOrderConfirmation(true)
           setShowOrderForm(false)
           clearCartAfterOrder()
+          window.scrollTo(0, 0);
          }
          return response.json();
          })
@@ -179,7 +181,7 @@ const Cart = () => {
 
   
   return (
-    <div className="mx-auto my-8 w-3/5">
+    <div className="mx-auto my-8 w-4/5 md:w-3/5">
       <h2 className="text-2xl font-bold mb-4 text-left">Varukorgen</h2>
       
       {cartItems.length > 0 ? (
@@ -282,10 +284,10 @@ const Cart = () => {
       )}
 
       {successOrderConfirmation && (
-      <section className='bg-primaryGreen text-primaryWhite text-center font-Lorinda-Solid py-10 shadow-lg'>
+      <section className='bg-primaryGreen text-primaryWhite text-center font-Playfair py-10 shadow-lg mb-24 mt-10'>
 
-        <h2 className='font-Lorinda-Solid text-3xl mb-4'>Beställningen är bekräftad!</h2>
-        <p>Tack för din beställning hos Mr. Sourdough!</p>
+        <h2 className='font-Playfair text-2xl md:text-4xl mb-4'>Beställningen är bekräftad!</h2>
+        <p className="text-base md:text-xl px-6" >Tack för din beställning hos Mr. Sourdough!</p>
 
       </section>
       )}  

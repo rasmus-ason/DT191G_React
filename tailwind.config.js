@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
       'Tilt-Prism': ['Tilt Prism', 'cursive'],
-      'Lorinda-Solid': ['Lorinda-Solid', 'cursive'],
+      'Playfair': ['Playfair Display', 'serif'],
       'Tilt-Warp': ['Tilt Warp', 'cursive']
     }},
     colors: {

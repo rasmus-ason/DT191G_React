@@ -10,19 +10,19 @@ const Footer = () => {
         <hr className='w-2/3 mx-auto'></hr>
 
         <nav className='py-10'>
-          <ul className='flex flex-col gap-3 text-md lg:text-xl'>
-            <Link to="alla-produkter" className='font-Lorinda-Solid'>Alla produkter</Link>
+          <ul className='flex flex-col gap-3 text-xl lg:text-2xl'>
+            <Link to="alla-produkter" className='font-Playfair'>Alla produkter</Link>
             <hr className='w-1/6 mx-auto'></hr>
-            <Link to="/recept" className='font-Lorinda-Solid'>Recept</Link>
+            <Link to="/recept" className='font-Playfair'>Recept</Link>
             <hr className='w-1/6 mx-auto'></hr>
-            <Link to="/guide" className='font-Lorinda-Solid'>Sätt en surdeg</Link>
+            <Link to="/guide" className='font-Playfair'>Sätt en surdeg</Link>
             <hr className='w-1/6 mx-auto'></hr>
-            <Link to="/om-oss" className='font-Lorinda-Solid'>Om oss</Link>
+            <Link to="/om-oss" className='font-Playfair'>Om oss</Link>
           </ul>
         </nav>
 
-        <div className="bg-white rounded-md p-4 w-1/3 mx-auto">
-          <h3 className='font-Lorinda-Solid text-4xl pb-2'>Kontakta oss</h3>
+        <div className="bg-white rounded-md p-4 w-5/6 sm:w-3/5 md:w-1/2 lg:w-1/3  mx-auto">
+          <h3 className='font-Tilt-Warp text-4xl pb-2'>Kontakta oss</h3>
           <form className="grid grid-cols-1 gap-4">
             <div>
               <label for="name" className="sr-only">Namn</label>
@@ -42,18 +42,18 @@ const Footer = () => {
           </form>
         </div>
 
-        <hr className='w-1/3 mx-auto mt-8'></hr>
+        <hr className='w-3/4 md:w-1/2 mx-auto mt-8'></hr>
         <div className="flex justify-center py-2">
           <nav>
             <ul className="flex">
-              <li className="pr-4 border-r">FAQ</li>
-              <li className="px-4 pr-4 border-r">Leveranser</li>
-              <li className="px-4 pr-4 border-r">Returer & Återköp</li>
-              <li className="px-4">Privacy Policy</li>
+              <li className="pr-2 md:pr-6 border-r">FAQ</li>
+              <li className="px-2 md:px-6 md:pr-6 border-r">Leveranser</li>
+              <li className="px-2 md:px-6 md:pr-6 border-r">Returer & Återköp</li>
+              <li className="md:px-6">Privacy Policy</li>
             </ul>
           </nav>
         </div>
-        <hr className='w-1/3 mx-auto mb-8'></hr>
+        <hr className='w-3/4 md:w-1/2 mx-auto'></hr>
 
 
         <p className='py-4'>&copy; 2023 Mr Sourdoug</p>

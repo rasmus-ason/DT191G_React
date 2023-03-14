@@ -1,25 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import RecipeImage from '../../Images/bread_02.jpg'
 
 const LatestRecipeBox = () => {
   return (
-    <div>
-        <div className='w-full relative'>
-            <img src={RecipeImage} alt="" />
-            <div 
-            className='absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-primaryBeige p-6 text-primaryLightGray 
-            text-4xl opacity-90 rounded-md shadow-md'>
-                <h3>Utvalt recept</h3>
-                <ul>
-                    <li>1,5 dl surdegskultur</li>
-                    <li>7 dl vatten (37C)</li>
-                    <li>1 tsk salt</li>
-                    <li>5 dl rågmjöl</li>
-                    <li>12 dl dinkelmjöl</li>
-                </ul>
-            </div>
-        </div>      
+    <div class="relative">
+      <img src={RecipeImage} alt="" />
+      <Link to="/recept">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primaryBeige 
+        p-6 text-primaryLightGray text-4xl opacity-95 hover:opacity-100 rounded-md shadow-md py-6">
+          <h3 class="font-Tilt-Warp text-2xl md:text-6xl xl:text-8xl text-center opacity-100">Kika in våra surdegsrecept!</h3>
+        </div>
+      </Link>
     </div>
+
+
+
   )
 }
 

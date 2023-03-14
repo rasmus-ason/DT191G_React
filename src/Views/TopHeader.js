@@ -62,26 +62,28 @@ const TopHeader = () => {
                         </Link>
 
                     <FaTimes size={20} className="absolute top-2 right-4 bg-primaryLightGray rounded-full" onClick={toggleMenu} />
-                    <ul className="list-none text-primaryLightGray cursor-pointer">
-                        <li className="py-2 text-center">
-                            <p className="block py-2 mx-auto font-bold text-xl hover:underline" onClick={toggleProducts}>
+                    <div className="list-none text-primaryLightGray cursor-pointer text-center">
+                        <p className="block py-2 mx-auto font-bold text-xl hover:underline" onClick={toggleProducts}>
                             Produkter
-                            </p>
-                            {showProducts && (
-                                <ul className="list-none">
-                                <li className="py-2 text-center hover:underline" onClick={handleItemClick}>Mjöler</li>
-                                <li className="py-2 text-center hover:underline" onClick={handleItemClick}>Verktyg</li>
-                                <li className="py-2 text-center hover:underline" onClick={handleItemClick}>Se alla produkter</li>
-                                </ul>
-                            )}
-                        </li>
-                        <hr className="w-1/3 mx-auto"></hr>
-                        <li className="py-2 text-center font-bold text-xl hover:underline" onClick={handleItemClick}>Surdegsskola</li>
-                        <hr className="w-1/3 mx-auto"></hr>
-                        <li className="py-2 text-center font-bold text-xl hover:underline" onClick={handleItemClick}>Start-Kit</li>
-                        <hr className="w-1/3 mx-auto"></hr>
-                        <li className="py-2 text-center font-bold text-xl hover:underline" onClick={handleItemClick}>Om Oss</li>
-                    </ul>
+                        </p>
+                        {showProducts && (
+                            <Link to="/alla-produkter" onClick={handleItemClick}>
+                            Se alla produkter
+                            </Link>
+                        )}
+                        <hr className="w-1/3 mx-auto my-4" />
+                        <Link to="/guide" className="font-bold text-xl hover:underline" onClick={handleItemClick}>
+                            Surdegsskola
+                        </Link>
+                        <hr className="w-1/3 mx-auto my-4" />
+                        <Link to="/startkit" className="font-bold text-xl hover:underline" onClick={handleItemClick}>
+                            Start-Kit
+                        </Link>
+                        <hr className="w-1/3 mx-auto my-4" />
+                        <Link to="/om-oss" className="font-bold text-xl hover:underline" onClick={handleItemClick}>
+                            Om Oss
+                        </Link>
+                        </div>
                     </div>
                 ) : (
                     <div className='bg-primaryWhite p-3 rounded-full cursor-pointer border-2'>

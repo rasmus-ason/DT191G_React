@@ -45,12 +45,12 @@ import { Link } from 'react-router-dom';
         <div className='flex flex-wrap gap-4 justify-center mb-12'>
           {[...new Set(products.map((product) => product.category))].map((category) => (
             <button 
-            className='bg-primaryDarkBlue text-primaryWhite px-8 py-1 rounded-md shadow-md font-Lorinda-Solid' 
+            className='bg-primaryDarkBlue text-primaryWhite px-8 py-1 rounded-md shadow-md font-Playfair' 
             key={category} 
             onClick={() => handleCategoryClick(category)}>{category}</button>
             ))}
           <button
-          className='bg-primaryDarkBlue text-primaryWhite px-8 py-1 rounded-md shadow-md font-Lorinda-Solid'
+          className='bg-primaryDarkBlue text-primaryWhite px-8 py-1 rounded-md shadow-md font-Playfair'
           onClick={() => setSelectedCategory(null)}>Visa alla kategorier</button>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
 
 //Components
 import Footer from './Views/Footer'
@@ -15,13 +15,26 @@ import SingleProduct from './ProductList/SingleProduct';
 
 
 function App() {
+
+  //Scroll to the top when route change
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
+  
   return (
     <div className="App">
 
       <TopHeader /> 
-        {/* Init routing */}
- 
+
      
+        <ScrollToTop />
+        {/* Init routing */}
         <main>
           <Routes>
               <Route path='/' element={<HomePage />} />

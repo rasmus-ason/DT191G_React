@@ -95,7 +95,7 @@ const SingleProduct = () => {
                     {/* Add to cart button - pass articlenumber and amount and store in session storage
                     Check if the cookie exist, if exist push into array */}
                     <button 
-                    className={`w-3/4 md:w-1/3 mx-auto border-4 border-primaryWhite flex justify-center items-center h-12 mt-4 text-primaryWhite font-Lorinda-Solid uppercase ${product.amountInStock === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                    className={`w-3/4 md:w-1/3 mx-auto border-4 border-primaryWhite flex justify-center items-center h-12 mt-4 text-primaryWhite font-Playfair uppercase ${product.amountInStock === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
                     onClick={handleAddToCart}
                     disabled={product.amountInStock === 0}
                     >
@@ -107,22 +107,22 @@ const SingleProduct = () => {
                             
                 </div>
 
-                <div className='bg-primaryBeige py-12 text-center font-Lorinda-Solid'>
-                    <h2 className='text-5xl text-primaryWhite font-Tilt-Warp'>{product.title}</h2>
-                    <h3 className='text-3xl text-primaryWhite py-3 font-Tilt-Warp'>{product.price} kr</h3>
+                <div className='bg-primaryBeige py-12 text-center font-Playfair'>
+                    <h2 className='text-3xl md:text-5xl text-primaryWhite font-Tilt-Warp'>{product.title}</h2>
+                    <h3 className='text-2xl md:text-3xl text-primaryWhite py-3 font-Tilt-Warp'>{product.price} kr</h3>
                     <button 
                         className='flex flex-row justify-center mx-auto items-center text-xl border-4
-                        border-primaryWhite w-1/4 text-primaryWhite hover:opacity-80'
+                        border-primaryWhite w-2/3 md:w-1/2 lg:w-1/3 text-primaryWhite hover:opacity-80'
                         onClick={toggleDropdown}
                     >
                         Om produkten 
                         {isOpen ? <FiArrowUp className="ml-2" /> : <FiArrowDown className="ml-2" />}
                     </button>
-                    <div id='dropdown-about-product' className='p-6 border-4 w-1/4 mx-auto text-primaryDarkBlue mt-2' style={{ display: isOpen ? 'block' : 'none' }}>
+                    <div id='dropdown-about-product' className='p-6 border-4 w-2/3 md:w-1/2 lg:w-1/3 mx-auto bg-primaryWhite text-primaryDarkBlue mt-2' style={{ display: isOpen ? 'block' : 'none' }}>
                         <h4 className='font-Tilt-Warp text-lg underline'>Artikelnummer</h4>
-                        <p>{product.articleNumber}</p>
+                        <p className='font-serif'>{product.articleNumber}</p>
                         <h4 className='font-Tilt-Warp text-lg underline mt-4'>Produktinfo</h4>
-                        <p> Produktinfo: {product.productInfo}</p>
+                        <p className='font-serif'> Produktinfo: {product.productInfo}</p>
                         {product.category === "Mjöler" ? <p> 
                             <h4 className='font-Tilt-Warp text-lg underline mt-4'>Vikt</h4>
                             Vikt: {product.weight} gram</p> : null }

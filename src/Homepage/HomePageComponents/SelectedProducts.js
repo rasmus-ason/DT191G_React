@@ -7,7 +7,7 @@ const SelectedProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5255/GetAllProducts', {
+    fetch('http://localhost:5255/GetLatestProducts', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -24,6 +24,8 @@ const SelectedProducts = () => {
    
         <div className='bg-primaryBeige py-8 overflow-x-hidden'>
         <h2 className="text-white font-Tilt-Warp text-center uppercase text-3xl py-6">Senaste Produkterna</h2>
+
+        <hr className='w-2/3 md:w-1/2 mx-auto pb-6 -mt-2'></hr>
 
         <section className="selectedProducts flex flex-row overflow-x-scroll overflow-y-hidden">
             {products.map(product => (
