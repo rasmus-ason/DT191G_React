@@ -46,7 +46,7 @@ import { Link } from 'react-router-dom';
           {[...new Set(products.map((product) => product.category))].map((category) => (
             <button 
             className='bg-primaryDarkBlue text-primaryWhite px-8 py-1 rounded-md shadow-md font-Playfair' 
-            key={category} 
+            key={category.productId} 
             onClick={() => handleCategoryClick(category)}>{category}</button>
             ))}
           <button

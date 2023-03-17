@@ -84,7 +84,7 @@ const SingleProduct = () => {
                     {product.amountInStock < 10 && product.amountInStock > 0 ? (
                     <p className='text-primaryWhite italic text-center outline w-40 mx-auto mb-4'>Få varor i lager</p>
                         ) : product.amountInStock === 0 ? (
-                    <p className='text-primaryWhite italic text-center outline w-40 mx-auto mb-4'>Slut i lager</p>
+                    <p className='text-primaryWhite italic text-center outline w-40 mx-auto mb-4 text-lg underline'>Slut i lager</p>
                         ) : null}
                     <div className='w-3/4 md:w-1/3 mx-auto bg-primaryWhite border-4 border-primaryWhite flex justify-center h-12'>
                         <button className='w-1/4 bg-primaryDarkBlue text-primaryWhite font-bold text-3xl pb-2' onClick={decrementCount}>-</button>
@@ -121,11 +121,16 @@ const SingleProduct = () => {
                     <div id='dropdown-about-product' className='p-6 border-4 w-2/3 md:w-1/2 lg:w-1/3 mx-auto bg-primaryWhite text-primaryDarkBlue mt-2' style={{ display: isOpen ? 'block' : 'none' }}>
                         <h4 className='font-Tilt-Warp text-lg underline'>Artikelnummer</h4>
                         <p className='font-serif'>{product.articleNumber}</p>
-                        <h4 className='font-Tilt-Warp text-lg underline mt-4'>Produktinfo</h4>
+                        <h4 className='font-Tilt-Warp text-lg underline'>Märke</h4>
+                        <p className='font-serif'>{product.brand}</p>
+                        <h4 className='font-Tilt-Warp text-lg underline'>Produktinfo</h4>
                         <p className='font-serif'> Produktinfo: {product.productInfo}</p>
                         {product.category === "Mjöler" ? <p> 
                             <h4 className='font-Tilt-Warp text-lg underline mt-4'>Vikt</h4>
                             Vikt: {product.weight} gram</p> : null }
+
+                        <hr className='text-primaryBeige w-4/5 mx-auto mt-6 mb-2'></hr>
+                        <span className='italic text-primaryBeige'>Mr. Sourdough</span>
                     </div>
                     </div>
             </article>   

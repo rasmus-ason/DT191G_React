@@ -25,16 +25,16 @@ const Footer = () => {
           <h3 className='font-Tilt-Warp text-4xl pb-2'>Kontakta oss</h3>
           <form className="grid grid-cols-1 gap-4">
             <div>
-              <label for="name" className="sr-only">Namn</label>
-              <input id="name" type="text" name="name" placeholder="Namn" class="border-gray-300 rounded-md w-full py-2 px-3" />
+              <label htmlFor="name" className="sr-only">Namn</label>
+              <input id="name" type="text" name="name" placeholder="Namn" className="border-gray-300 rounded-md w-full py-2 px-3" />
             </div>
             <div>
-              <label for="email" className="sr-only">E-post</label>
-              <input id="email" type="email" name="email" placeholder="E-post" class="border-gray-300 rounded-md w-full py-2 px-3" />
+              <label htmlFor="email" className="sr-only">E-post</label>
+              <input id="email" type="email" name="email" placeholder="E-post" className="border-gray-300 rounded-md w-full py-2 px-3" />
             </div>
             <div>
-              <label for="message" className="sr-only">Meddelande</label>
-              <textarea id="message" name="message" placeholder="Meddelande" class="border-gray-300 rounded-md w-full py-2 px-3"></textarea>
+              <label htmlFor="message" className="sr-only">Meddelande</label>
+              <textarea id="message" name="message" placeholder="Meddelande" className="border-gray-300 rounded-md w-full py-2 px-3"></textarea>
             </div>
             <div>
               <button type="submit" className="outline w-full mx-auto text-white font-bold py-2 px-4 rounded">Skicka</button>

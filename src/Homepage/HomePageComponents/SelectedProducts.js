@@ -29,7 +29,7 @@ const SelectedProducts = () => {
 
         <section className="selectedProducts flex flex-row overflow-x-scroll overflow-y-hidden">
             {products.map(product => (
-            <div className="relative w-3/5 sm:w-1/2 md:w-1/3 flex-none p-4" key={product.id}>
+            <div className="relative w-3/5 sm:w-1/2 md:w-1/3 flex-none p-4" key={product.productId}>
               <img className='h-80 w-full object-cover' src={product.imageName} alt={product.altText} />
               <Link to={`/produkt/${product.productId}`}>
                 <div className="absolute inset-x-0 bottom-8 flex justify-center items-center">
